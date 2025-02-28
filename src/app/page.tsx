@@ -22,6 +22,7 @@ export default function Home() {
           </li>
           <li className="mb-2">Save and see your changes instantly.</li>
           <li className="mb-2">Hello Word!!</li>
+          <li className="mb-2"> Teste Deploy Vercel</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
