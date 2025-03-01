@@ -22,7 +22,7 @@ export default function Home() {
           <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
             {/* Adicione sua foto ou avatar aqui */}
             <img
-              src="https://avatars.githubusercontent.com/u/34896557?v=4"
+              src="https://avatars.githubusercontent.com/u/140264468?v=4"
               alt="Foto de perfil"
               className="object-cover w-full h-full"
             />
