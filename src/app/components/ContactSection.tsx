@@ -3,17 +3,17 @@ export default function ContactSection() {
     {
       icon: "📧",
       label: "E-mail",
-      link: "mailto:seu-email@example.com",
+      link: "mailto:mr.jociriju@gmail.com",
     },
     {
       icon: "🔗",
       label: "LinkedIn",
-      link: "https://linkedin.com/in/seu-perfil",
+      link: "https://www.linkedin.com/in/jose-cicero-ribeiro-1b2632271/",
     },
     {
       icon: "🐙",
       label: "GitHub",
-      link: "https://github.com/seu-usuario",
+      link: "https://github.com/MrJCRJ",
     },
   ];
 

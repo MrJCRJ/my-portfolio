@@ -21,7 +21,7 @@ export default function ProfileSection() {
       </p>
       <div className="flex justify-center gap-4">
         <a
-          href="https://linkedin.com/in/seu-perfil"
+          href="https://www.linkedin.com/in/jose-cicero-ribeiro-1b2632271/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
@@ -29,7 +29,7 @@ export default function ProfileSection() {
           LinkedIn
         </a>
         <a
-          href="https://github.com/seu-usuario"
+          href="https://github.com/MrJCRJ"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
