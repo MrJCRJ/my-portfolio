@@ -1,6 +1,7 @@
 "use client"; // Marca o componente como Client Component
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -21,10 +22,13 @@ export default function Home() {
         <section className="text-center mb-12">
           <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
             {/* Adicione sua foto ou avatar aqui */}
-            <img
+            <Image
               src="https://avatars.githubusercontent.com/u/140264468?v=4"
               alt="Foto de perfil"
+              width={500}
+              height={500}
               className="object-cover w-full h-full"
+              priority // Add this if the image is above the fold
             />
           </div>
           <h1 className="text-4xl font-bold mb-2">
