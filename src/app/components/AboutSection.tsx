@@ -135,32 +135,77 @@ export default function AboutSection({ id }: { id?: string }) {
         </div>
       </motion.div>
 
-      {/* Tooltips */}
-      <Tooltip id="fullstack-tooltip" place="top">
+      {/* Tooltips - Ajustados para mobile */}
+      <Tooltip
+        id="fullstack-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Desenvolvedor que trabalha tanto no front-end quanto no back-end.
       </Tooltip>
-      <Tooltip id="react-tooltip" place="top">
+      <Tooltip
+        id="react-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Biblioteca JavaScript para construir interfaces de usuário interativas.
       </Tooltip>
-      <Tooltip id="nextjs-tooltip" place="top">
+      <Tooltip
+        id="nextjs-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Framework React para aplicações web otimizadas e server-side rendering.
       </Tooltip>
-      <Tooltip id="typescript-tooltip" place="top">
+      <Tooltip
+        id="typescript-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Superset do JavaScript que adiciona tipagem estática para evitar erros.
       </Tooltip>
-      <Tooltip id="nodejs-tooltip" place="top">
+      <Tooltip
+        id="nodejs-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Ambiente de execução JavaScript no servidor, usado para back-end.
       </Tooltip>
-      <Tooltip id="express-tooltip" place="top">
+      <Tooltip
+        id="express-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Framework minimalista para construir APIs com Node.js.
       </Tooltip>
-      <Tooltip id="mongodb-tooltip" place="top">
+      <Tooltip
+        id="mongodb-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Banco de dados NoSQL orientado a documentos, flexível e escalável.
       </Tooltip>
-      <Tooltip id="docker-tooltip" place="top">
+      <Tooltip
+        id="docker-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Plataforma para criar, gerenciar e executar aplicativos em containers.
       </Tooltip>
-      <Tooltip id="cicd-tooltip" place="top">
+      <Tooltip
+        id="cicd-tooltip"
+        place="bottom"
+        float={true}
+        style={{ maxWidth: "90vw" }}
+      >
         Prática DevOps para automação de build, testes e deploy contínuos.
       </Tooltip>
     </section>
