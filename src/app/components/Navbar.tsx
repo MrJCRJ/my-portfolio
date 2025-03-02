@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
-import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,12 +14,19 @@ export default function Navbar() {
     }
   };
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Rola suavemente para o topo
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full p-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 z-50">
       <div className="max-w-4xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-lg font-bold">
+        <button
+          onClick={handleScrollToTop}
+          className="text-lg font-bold hover:underline"
+        >
           Meu Portfólio
-        </Link>
+        </button>
         <div className="flex items-center gap-4">
           {/* Botão do menu hamburguer (mobile) */}
           <button
