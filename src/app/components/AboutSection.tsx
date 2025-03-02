@@ -10,8 +10,10 @@ export default function AboutSection({ id }: { id?: string }) {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl font-bold mb-4">Sobre Mim</h2>
-        <div className="space-y-4 text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          Sobre Mim
+        </h2>
+        <div className="space-y-6 text-gray-800 dark:text-gray-100">
           <p>
             🚀{" "}
             <strong className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -21,7 +23,7 @@ export default function AboutSection({ id }: { id?: string }) {
           <p>
             Sou um desenvolvedor{" "}
             <span
-              className="font-semibold text-blue-600 dark:text-blue-400 underline decoration-dotted cursor-pointer"
+              className="font-semibold text-blue-600 dark:text-blue-400 underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               data-tooltip-id="fullstack-tooltip"
             >
               Full Stack
@@ -49,26 +51,26 @@ export default function AboutSection({ id }: { id?: string }) {
             Mais do que listar tecnologias, meu foco está em entregar soluções
             eficientes e escaláveis. Mas, para quem gosta de detalhes:
           </p>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside space-y-2">
             <li>
               <strong>Front-end?</strong> Faço interfaces modernas e responsivas
               com{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="react-tooltip"
               >
                 React
               </span>
               ,{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="nextjs-tooltip"
               >
                 Next.js
               </span>{" "}
               e{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="typescript-tooltip"
               >
                 TypeScript
@@ -79,21 +81,21 @@ export default function AboutSection({ id }: { id?: string }) {
               <strong>Back-end?</strong> Construo APIs bem estruturadas e
               seguras com{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="nodejs-tooltip"
               >
                 Node.js
               </span>
               ,{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="express-tooltip"
               >
                 Express
               </span>{" "}
               e{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="mongodb-tooltip"
               >
                 MongoDB
@@ -103,14 +105,14 @@ export default function AboutSection({ id }: { id?: string }) {
             <li>
               <strong>DevOps?</strong> Uso{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="docker-tooltip"
               >
                 Docker
               </span>{" "}
               e{" "}
               <span
-                className="underline decoration-dotted cursor-pointer"
+                className="underline decoration-dotted cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 data-tooltip-id="cicd-tooltip"
               >
                 CI/CD
@@ -128,7 +130,7 @@ export default function AboutSection({ id }: { id?: string }) {
             resolver problemas de verdade e entregar código que faz a diferença.
             Bora criar algo incrível? 😃💻
           </p>
-          <p className="font-bold">
+          <p className="font-bold text-blue-600 dark:text-blue-400">
             Se quiser saber mais sobre meus projetos ou bater um papo sobre
             tecnologia, é só me chamar!
           </p>
@@ -140,7 +142,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="fullstack-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Desenvolvedor que trabalha tanto no front-end quanto no back-end.
       </Tooltip>
@@ -148,7 +157,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="react-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Biblioteca JavaScript para construir interfaces de usuário interativas.
       </Tooltip>
@@ -156,7 +172,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="nextjs-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Framework React para aplicações web otimizadas e server-side rendering.
       </Tooltip>
@@ -164,7 +187,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="typescript-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Superset do JavaScript que adiciona tipagem estática para evitar erros.
       </Tooltip>
@@ -172,7 +202,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="nodejs-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Ambiente de execução JavaScript no servidor, usado para back-end.
       </Tooltip>
@@ -180,7 +217,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="express-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Framework minimalista para construir APIs com Node.js.
       </Tooltip>
@@ -188,7 +232,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="mongodb-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Banco de dados NoSQL orientado a documentos, flexível e escalável.
       </Tooltip>
@@ -196,7 +247,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="docker-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Plataforma para criar, gerenciar e executar aplicativos em containers.
       </Tooltip>
@@ -204,7 +262,14 @@ export default function AboutSection({ id }: { id?: string }) {
         id="cicd-tooltip"
         place="bottom"
         float={true}
-        style={{ maxWidth: "90vw" }}
+        style={{
+          maxWidth: "90vw",
+          backgroundColor: "#1e40af",
+          color: "#ffffff",
+          borderRadius: "8px",
+          padding: "8px 12px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
       >
         Prática DevOps para automação de build, testes e deploy contínuos.
       </Tooltip>
