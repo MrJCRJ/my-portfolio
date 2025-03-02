@@ -1,13 +1,17 @@
-"use client"; // Adicione isso no topo do arquivo
+"use client";
 
-import Link from "next/link";
+import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import Link from "next/link";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsMenuOpen(false); // Fecha o menu após clicar em um link
     }
   };
 
@@ -18,21 +22,53 @@ export default function Navbar() {
           Meu Portfólio
         </Link>
         <div className="flex items-center gap-4">
+          {/* Botão do menu hamburguer (mobile) */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="sm:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </button>
+          {/* Links (visíveis apenas em telas maiores) */}
+          <div className="hidden sm:flex items-center gap-4">
+            <button
+              onClick={() => handleScroll("about")}
+              className="hover:underline"
+            >
+              Sobre
+            </button>
+            <button
+              onClick={() => handleScroll("projects")}
+              className="hover:underline"
+            >
+              Projetos
+            </button>
+            <div className="ml-4">
+              <ThemeToggle />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Menu mobile (visível apenas quando isMenuOpen é true) */}
+      {isMenuOpen && (
+        <div className="sm:hidden mt-4">
           <button
             onClick={() => handleScroll("about")}
-            className="hover:underline"
+            className="block w-full text-left p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             Sobre
           </button>
           <button
             onClick={() => handleScroll("projects")}
-            className="hover:underline"
+            className="block w-full text-left p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             Projetos
           </button>
-          <ThemeToggle />
+          <div className="p-2 flex justify-center">
+            <ThemeToggle />
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 }
