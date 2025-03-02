@@ -1,4 +1,4 @@
-export default function ProjectsSection() {
+export default function ProjectsSection({ id }: { id?: string }) {
   const projects = [
     {
       title: "Projeto 1",
@@ -15,7 +15,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="mb-12">
+    <section id={id} className="mb-12">
       <h2 className="text-2xl font-bold mb-4">Projetos</h2>
       <div className="grid gap-6">
         {projects.map((project, index) => (

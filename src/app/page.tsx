@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import ThemeToggle from "./components/ThemeToggle";
 import ProfileSection from "./components/ProfileSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -22,17 +21,12 @@ export default function Home() {
     return null;
   }
 
-  console.log(theme);
-
   return (
     <div className="min-h-screen p-6 sm:p-8 font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <ThemeToggle />
       <main className="max-w-2xl mx-auto pt-20">
-        {" "}
-        {/* Adicionado pt-20 */}
         <ProfileSection />
-        <AboutSection />
-        <ProjectsSection />
+        <AboutSection id="about" /> {/* Adicionado id */}
+        <ProjectsSection id="projects" /> {/* Adicionado id */}
         <SkillsSection />
         <ContactSection />
         <ResumeSection />
