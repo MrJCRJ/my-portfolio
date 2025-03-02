@@ -79,13 +79,13 @@ export default function AboutSection({ id }: { id?: string }) {
           <p>
             🚀{" "}
             <strong className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Júnior Full Stack Problem Solver na área!
+              Full Stack Júnior Problem Solver na área!
             </strong>
           </p>
           <p>
             Sou um desenvolvedor{" "}
             <span
-              className="font-semibold text-blue-600 dark:text-blue-400 underline decoration-dotted cursor-pointer"
+              className="underline decoration-dotted cursor-pointer"
               data-tooltip-id="fullstack-tooltip"
             >
               Full Stack
