@@ -6,7 +6,6 @@ import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import ContactSection from "./components/ContactSection";
-import ResumeSection from "./components/ResumeSection";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -27,7 +26,6 @@ export default function Home() {
         <ProjectsSection id="projects" />
         <SkillsSection />
         <ContactSection />
-        <ResumeSection />
       </main>
     </div>
   );
