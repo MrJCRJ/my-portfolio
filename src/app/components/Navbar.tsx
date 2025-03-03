@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +40,6 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <ThemeToggle />
           </div>
 
           {/* Menu Mobile Toggle */}
@@ -67,7 +65,6 @@ export default function Navbar() {
               {link.label}
             </button>
           ))}
-          <ThemeToggle />
         </div>
       )}
     </nav>
