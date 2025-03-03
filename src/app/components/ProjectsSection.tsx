@@ -8,7 +8,7 @@ export default function ProjectsSection({ id }: { id?: string }) {
       title: "Projeto 1",
       description:
         "Descrição breve do projeto. Tecnologias usadas: React, Node.js, Tailwind CSS.",
-      link: "https://github.com/seu-usuario/projeto-1",
+      link: "https://my-history-frontend-git-main-jose-ciceros-projects.vercel.app/",
       image: "/images/projeto1.png", // Caminho da imagem local ou externa
       technologies: [
         { icon: <FaReact className="w-6 h-6 text-blue-500" />, name: "React" },
