@@ -41,7 +41,7 @@ interface PageProps {
   params: { id: string };
 }
 
-export default function ProjectDetails({ params }: PageProps) {
+export default async function ProjectDetails({ params }: PageProps) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
