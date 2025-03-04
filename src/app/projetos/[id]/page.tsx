@@ -69,7 +69,6 @@ export default function ProjectDetails({ params }: PageProps) {
             alt={`Imagem do ${project.title}`}
             width={800}
             height={450}
-            layout="responsive"
             className="rounded-lg shadow-md"
           />
         </div>
