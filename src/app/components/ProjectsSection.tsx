@@ -49,9 +49,9 @@ export default function ProjectsSection({ id }: { id?: string }) {
   ];
 
   return (
-    <section id={id} className="mb-12 scroll-mt-20">
+    <section id={id} className="mb-12 scroll-mt-20 px-4 sm:px-6">
       <h2 className="text-2xl font-bold mb-6">Projetos</h2>
-      <div className="grid sm:grid-cols-2 gap-6">
+      <div className="grid sm:grid-cols-2 gap-6 justify-center">
         {projects.map((project, index) => (
           <Link
             key={index}
