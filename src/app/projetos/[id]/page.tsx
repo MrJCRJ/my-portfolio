@@ -38,11 +38,12 @@ const projects = [
 ];
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function ProjectDetails({ params }: PageProps) {
-  const project = projects.find((p) => p.id === params.id);
+  const resolvedParams = await params;
+  const project = projects.find((p) => p.id === resolvedParams.id);
 
   if (!project) {
     return <div>Projeto não encontrado</div>;
