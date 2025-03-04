@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
-export default function Navbar() {
+// Componente que lida com a navegação e busca de seções
+const NavbarContent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -98,4 +99,13 @@ export default function Navbar() {
       )}
     </nav>
   );
-}
+};
+
+// Componente suspenso para lidar com a navegação
+const Navbar = () => (
+  <Suspense fallback={<div>Carregando...</div>}>
+    <NavbarContent />
+  </Suspense>
+);
+
+export default Navbar;
