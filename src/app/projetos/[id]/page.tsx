@@ -1,13 +1,12 @@
 import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
 import Image from "next/image";
 
-// Dados dos projetos (pode ser movido para um arquivo separado)
 const projects = [
   {
     id: "my-history",
     title: "My-History",
     description:
-      "O My-History é uma aplicação web full-stack que permite aos usuários criar, visualizar e gerenciar histórias de forma simples e intuitiva. O projeto foi desenvolvido com uma arquitetura moderna, separando o frontend e o backend para garantir escalabilidade e manutenção facilitada.",
+      "O My-History é uma aplicação web full-stack que permite aos usuários criar, visualizar e gerenciar histórias de forma simples e intuitiva.",
     link: "https://my-history-frontend-git-main-jose-ciceros-projects.vercel.app/",
     image: "/projeto_1.png",
     technologies: [
@@ -36,10 +35,13 @@ const projects = [
       </ul>
     `,
   },
-  // Outros projetos...
 ];
 
-export default function ProjectDetails({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: { id: string };
+}
+
+export default function ProjectDetails({ params }: PageProps) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
