@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
-import Link from "next/link";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname(); // Verifica a página atual
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const links = [
     { id: "about", label: "Sobre" },
@@ -26,27 +26,36 @@ export default function Navbar() {
     if (pathname === "/") {
       handleScroll(id);
     } else {
-      router.push(`/?section=${id}`);
+      router.push(`/?section=${id}`, { scroll: false });
     }
     setIsMenuOpen(false);
   };
 
-  // Efeito para rolar para a seção ao entrar na página
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const section = params.get("section");
-    if (section) {
-      handleScroll(section);
+  const handleLogoClick = () => {
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push("/");
     }
-  }, []);
+  };
+
+  useEffect(() => {
+    const section = searchParams.get("section");
+    if (section) {
+      setTimeout(() => handleScroll(section), 100);
+    }
+  }, [searchParams]);
 
   return (
     <nav className="fixed top-0 left-0 w-full p-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Logo / Voltar ao topo */}
-        <Link href="/" className="text-lg font-bold hover:underline">
+        {/* Logo / Voltar ao topo ou Home */}
+        <button
+          onClick={handleLogoClick}
+          className="text-lg font-bold hover:underline"
+        >
           Meu Portfólio
-        </Link>
+        </button>
 
         <div className="flex items-center gap-4">
           {/* Menu Desktop */}
