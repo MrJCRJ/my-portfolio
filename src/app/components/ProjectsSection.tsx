@@ -1,15 +1,17 @@
 import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiMongodb } from "react-icons/si";
 import Image from "next/image";
+import Link from "next/link"; // Importe o Link do Next.js
 
 export default function ProjectsSection({ id }: { id?: string }) {
   const projects = [
     {
-      title: "Projeto 1",
+      id: "my-history", // Adicione um ID único para cada projeto
+      title: "My-History",
       description:
         "Descrição breve do projeto. Tecnologias usadas: React, Node.js, Tailwind CSS.",
       link: "https://my-history-frontend-git-main-jose-ciceros-projects.vercel.app/",
-      image: "/images/projeto1.png", // Caminho da imagem local ou externa
+      image: "/projeto_1.png",
       technologies: [
         { icon: <FaReact className="w-6 h-6 text-blue-500" />, name: "React" },
         {
@@ -23,6 +25,7 @@ export default function ProjectsSection({ id }: { id?: string }) {
       ],
     },
     {
+      id: "projeto-2", // Adicione um ID único para cada projeto
       title: "Projeto 2",
       description:
         "Descrição breve do projeto. Tecnologias usadas: Next.js, TypeScript, MongoDB.",
@@ -50,11 +53,9 @@ export default function ProjectsSection({ id }: { id?: string }) {
       <h2 className="text-2xl font-bold mb-6">Projetos</h2>
       <div className="grid sm:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <a
+          <Link
             key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`/projetos/${project.id}`}
             className="block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             <Image
@@ -83,7 +84,7 @@ export default function ProjectsSection({ id }: { id?: string }) {
                 ))}
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
