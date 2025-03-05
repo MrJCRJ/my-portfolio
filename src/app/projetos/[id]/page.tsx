@@ -20,43 +20,33 @@ const projects = [
         name: "Tailwind CSS",
       },
     ],
-    details: [
-      {
-        title: "Funcionalidades Principais",
-        list: [
-          "Publicação de histórias com título e conteúdo.",
-          "Listagem de histórias em ordem cronológica.",
-          "Interface responsiva e moderna.",
-        ],
-      },
-      {
-        title: "Tecnologias Utilizadas",
-        list: [
-          "Frontend: Next.js, React, Tailwind CSS.",
-          "Backend: Node.js, Express, MongoDB.",
-          "Deploy: Vercel (frontend e backend).",
-        ],
-      },
-    ],
+    details: `
+      <h3 class="text-xl font-bold mb-4">Funcionalidades Principais</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Publicação de histórias com título e conteúdo.</li>
+        <li>Listagem de histórias em ordem cronológica.</li>
+        <li>Interface responsiva e moderna.</li>
+      </ul>
+      <h3 class="text-xl font-bold mb-4">Tecnologias Utilizadas</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Frontend: Next.js, React, Tailwind CSS.</li>
+        <li>Backend: Node.js, Express, MongoDB.</li>
+        <li>Deploy: Vercel (frontend e backend).</li>
+      </ul>
+    `,
   },
 ];
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export default function ProjectDetails({ params }: PageProps) {
-  const project = projects.find((p) => p.id === params.id);
+export default async function ProjectDetails({ params }: PageProps) {
+  const resolvedParams = await params;
+  const project = projects.find((p) => p.id === resolvedParams.id);
 
   if (!project) {
-    return (
-      <div className="text-center py-8">
-        <h2 className="text-2xl font-semibold">Projeto não encontrado</h2>
-        <p className="text-gray-600">
-          Parece que o projeto que você está procurando não existe.
-        </p>
-      </div>
-    );
+    return <div>Projeto não encontrado</div>;
   }
 
   return (
@@ -76,19 +66,11 @@ export default function ProjectDetails({ params }: PageProps) {
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             {project.description}
           </p>
-          <div>
-            {project.details.map((section, idx) => (
-              <div key={idx} className="mb-6">
-                <h3 className="text-xl font-bold mb-4">{section.title}</h3>
-                <ul className="list-disc list-inside mb-4">
-                  {section.list.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-4 mt-6">
+          <div
+            className="prose dark:prose-invert"
+            dangerouslySetInnerHTML={{ __html: project.details }}
+          />
+          <div className="flex gap-3 mt-6">
             {project.technologies.map((tech, idx) => (
               <div
                 key={idx}
