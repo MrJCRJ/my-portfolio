@@ -6,10 +6,10 @@ import Link from "next/link";
 export default function ProjectsSection({ id }: { id?: string }) {
   const projects = [
     {
-      id: "my-history",
-      title: "My-History",
+      id: "my-notes",
+      title: "My-Notes",
       description:
-        "Uma aplicação web full-stack para criação e gestão de histórias, utilizando React, Node.js e Tailwind CSS.",
+        "Uma aplicação web full-stack que permite aos usuários criar, visualizar e gerenciar histórias de forma intuitiva.",
       link: "https://my-history-frontend-git-main-jose-ciceros-projects.vercel.app/",
       image: "/projeto_1.png",
       technologies: [

@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const projects = [
   {
-    id: "my-history",
-    title: "My-History",
+    id: "my-notes",
+    title: "My-Notes",
     description:
-      "O My-History é uma aplicação web full-stack que permite aos usuários criar, visualizar e gerenciar histórias de forma simples e intuitiva.",
+      "Uma aplicação web full-stack que permite aos usuários criar, visualizar e gerenciar histórias de forma intuitiva.",
     link: "https://my-history-frontend-git-main-jose-ciceros-projects.vercel.app/",
     image: "/projeto_1.png",
     technologies: [
@@ -23,9 +23,9 @@ const projects = [
     details: `
       <h3 class="text-xl font-bold mb-4">Funcionalidades Principais</h3>
       <ul class="list-disc list-inside mb-4">
-        <li>Publicação de histórias com título e conteúdo.</li>
-        <li>Listagem de histórias em ordem cronológica.</li>
-        <li>Interface responsiva e moderna.</li>
+        <li>Criação e edição de notas personalizadas.</li>
+        <li>Organização de notas por categorias ou tags.</li>
+        <li>Interface limpa e responsiva para uma melhor experiência do usuário.</li>
       </ul>
       <h3 class="text-xl font-bold mb-4">Tecnologias Utilizadas</h3>
       <ul class="list-disc list-inside mb-4">
