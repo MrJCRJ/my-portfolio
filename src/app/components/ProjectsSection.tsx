@@ -50,17 +50,17 @@ export default function ProjectsSection({ id }: { id?: string }) {
 
   return (
     <section id={id} className="mb-16 scroll-mt-20 px-4 sm:px-6 lg:px-8 w-full">
-      <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-800 dark:text-gray-200">
+      <h2 className="text-3xl font-extrabold text-center mb-8 sm:mb-12 text-gray-800 dark:text-gray-200">
         Meus Projetos
       </h2>
-      <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <Link
             key={index}
             href={`/projetos/${project.id}`}
             className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
           >
-            <div className="relative h-64 w-full overflow-hidden rounded-t-lg">
+            <div className="relative h-48 sm:h-64 w-full overflow-hidden rounded-t-lg">
               <Image
                 src={project.image}
                 alt={`Imagem do ${project.title}`}
@@ -69,18 +69,18 @@ export default function ProjectsSection({ id }: { id?: string }) {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2 group-hover:text-blue-600 transition-colors duration-200">
                 {project.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full"
+                    className="flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 sm:px-3 py-1 rounded-full"
                   >
                     {tech.icon}
                     <span>{tech.name}</span>
@@ -88,7 +88,7 @@ export default function ProjectsSection({ id }: { id?: string }) {
                 ))}
               </div>
             </div>
-            <div className="px-6 pb-6">
+            <div className="px-4 sm:px-6 pb-4 sm:pb-6">
               <span className="text-blue-600 dark:text-blue-400 group-hover:underline transition-colors">
                 Ver Detalhes
               </span>
