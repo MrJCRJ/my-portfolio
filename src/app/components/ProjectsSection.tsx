@@ -25,8 +25,8 @@ export default function ProjectsSection({ id }: { id?: string }) {
       ],
     },
     {
-      id: "projeto-2",
-      title: "Projeto 2",
+      id: "my-events",
+      title: "My-Events",
       description:
         "Aplicação com Next.js e TypeScript, utilizando MongoDB para persistência de dados.",
       link: "https://github.com/seu-usuario/projeto-2",

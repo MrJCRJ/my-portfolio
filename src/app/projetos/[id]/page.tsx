@@ -35,6 +35,39 @@ const projects = [
       </ul>
     `,
   },
+  {
+    id: "my-events",
+    title: "My-Events",
+    description:
+      "Test Event Uma aplicação web full-stack que permite aos usuários criar, visualizar e gerenciar histórias de forma intuitiva.",
+    link: "https://my-events-front.vercel.app/",
+    image: "/projeto_1.png",
+    technologies: [
+      { icon: <FaReact className="w-6 h-6 text-blue-500" />, name: "React" },
+      {
+        icon: <FaNodeJs className="w-6 h-6 text-green-500" />,
+        name: "Node.js",
+      },
+      {
+        icon: <FaCss3Alt className="w-6 h-6 text-purple-500" />,
+        name: "Tailwind CSS",
+      },
+    ],
+    details: `
+      <h3 class="text-xl font-bold mb-4">Funcionalidades Principais</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Criação e edição de notas personalizadas.</li>
+        <li>Organização de notas por categorias ou tags.</li>
+        <li>Interface limpa e responsiva para uma melhor experiência do usuário.</li>
+      </ul>
+      <h3 class="text-xl font-bold mb-4">Tecnologias Utilizadas</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Frontend: Next.js, React, Tailwind CSS.</li>
+        <li>Backend: Node.js, Express, MongoDB.</li>
+        <li>Deploy: Vercel (frontend e backend).</li>
+      </ul>
+    `,
+  },
 ];
 
 interface PageProps {
